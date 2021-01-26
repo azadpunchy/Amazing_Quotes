@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- I can also animate divs by using aos library -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>azadpunchy Quotes app</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./sass/main.css" />
+  </head>
+  <body>
+    <!-- <div id="quotes" ></div>
+    <div id="author" ></div>
+    <button id="newq">new Quotes</button>
+    <button id="tweetMe">tweet</button> -->
+    <div class="container">
+      <div class="inner">
+        <div class="box">
+          <p class="number">
+            <img
+              src="images/logo.png"
+              alt="tweetMe"
+              title="TweetMe"
+              id="tweetMe"
+            />
+          </p>
+
+          <div class="text">
+            <i class="start-quote fas fa-quote-left"></i>
+            <p id="quotes" class="quotes"></p>
+            <p id="author" class="author"></p>
+          </div>
+          <label class="button">
+            <p id="newq" class="newq">new Quotes</p>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const quotes = document.getElementById("quotes");
+      const author = document.getElementById("author");
+      const newq = document.getElementById("newq");
+      const tweetMe = document.getElementById("tweetMe");
+      let realdata = "";
+      let quotesdata = "";
+
+      const tweetNow = () => {
+        let tweetPost = `https://twitter.com/intent/tweet?text=${
+          quotesdata.text
+        }                              By ${
+          quotesdata.author == null
+            ? (author.innerText = "'Unknown'")
+            : (author.innerText = `${quotesdata.author}`)
+        }`;
+        window.open(tweetPost);
+      };
+      const getnewquotes = () => {
+        // console.log(realdata.length);
+        let rnum = Math.floor(Math.random() * (realdata.length + 1));
+        quotesdata = realdata[rnum];
+        quotes.innerText = `${quotesdata.text}`;
+        quotesdata.author == null
+          ? (author.innerText = "Unknown")
+          : (author.innerText = `${quotesdata.author}`);
+        // console.log(realdata[rnum].text,rnum)
+      };
+      const getQuotes = async () => {
+        const api = "https://type.fit/api/quotes";
+        try {
+          let data = await fetch(api);
+          realdata = await data.json();
+          getnewquotes();
+          // console.log(realdata[rnum].text);
+        } catch (error) {}
+      };
+      tweetMe.addEventListener("click", tweetNow);
+      newq.addEventListener("click", getnewquotes);
+      getQuotes();
+    </script>
+    <!-- we can also use cdn link -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+  </body>
+</html>

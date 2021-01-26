@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "dancing script";
+  src: url("../Dancing_Script/DancingScript-VariableFont_wght.ttf");
+}
+
+body {
+  background: #222f3e;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 70vh;
+  background: #00acee;
+  border-radius: 5px;
+  font-family: "dancing script", cursive;
+  font-weight: bold;
+  overflow: hidden;
+  color: #797d7f;
+  letter-spacing: 0.5px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.inner {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+}
+
+.number::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: -30px;
+  width: 90px;
+  height: 200px;
+  background: rgba(99, 170, 236, 0.568);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: -1;
+  -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.number {
+  font-family: sans-serif;
+  position: absolute;
+  margin: 0;
+  top: 15px;
+  right: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.number img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -25px;
+  right: -7px;
+  cursor: pointer;
+  -webkit-animation: rot 1s linear;
+          animation: rot 1s linear;
+}
+
+.number:hover img {
+  -webkit-animation: rot 1s linear;
+          animation: rot 1s linear;
+}
+
+@-webkit-keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.quote {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.start-quote {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 6%;
+  font-size: 2rem;
+  top: 12%;
+  text-align: center;
+}
+
+.quotes {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 8%;
+  right: 1%;
+  top: 28%;
+  text-align: center;
+}
+
+.author {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 8%;
+  right: 7%;
+  font-family: cursive;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.newq {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7%;
+  font-size: 1rem;
+  font-family: cursive;
+  text-align: center;
+  background: #0071a5;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+@media (max-width: 768px) {
+  .number::before {
+    width: 75px;
+  }
+  .number img {
+    width: 25px;
+    height: 25px;
+    top: -7px;
+    left: -12px;
+  }
+  .start-quote {
+    left: 12%;
+    font-size: 1.2rem;
+  }
+  .quotes {
+    left: 10%;
+    right: 1.5%;
+    top: 25%;
+    font-size: 1rem;
+  }
+  .author {
+    right: 6%;
+    bottom: 7.5%;
+    font-size: 0.7rem;
+    font-weight: bolder;
+  }
+  .newq {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: lighter;
+  }
+}
+
+@media (max-width: 600px) {
+  .number::before {
+    width: 70px;
+  }
+  .number img {
+    width: 20px;
+    height: 20px;
+    top: -7px;
+    left: -12px;
+  }
+  .start-quote {
+    left: 10%;
+    font-size: 1.4rem;
+  }
+  .quotes {
+    left: 10%;
+    right: 1%;
+    top: 22%;
+    font-size: 0.8rem;
+  }
+  .author {
+    right: 5%;
+    bottom: 7.5%;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  .newq {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
