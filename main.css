@@ -201,6 +201,9 @@ body {
     text-align: center;
     font-weight: lighter;
   }
+  .container {
+    width: 70vw;
+  }
 }
 
 @media (max-width: 600px) {
@@ -232,6 +235,12 @@ body {
   .newq {
     font-size: 0.8rem;
     text-align: center;
+  }
+  .container {
+    width: 85vw;
+  }
+  .inner {
+    width: 85vw;
   }
 }
 /*# sourceMappingURL=main.css.map */
