@@ -170,15 +170,90 @@ body {
   border-radius: 5%;
 }
 
+.tweet__me {
+  color: white;
+  font-family: cursive;
+  position: absolute;
+  top: 8.5%;
+  left: 52%;
+  font-size: 1rem;
+}
+
+.arrow {
+  color: white;
+  position: absolute;
+  top: 8%;
+  left: 85%;
+  font-size: 2rem;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes example {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    opacity: 0.5;
+  }
+  50% {
+    top: 200px;
+    opacity: 1;
+  }
+  75% {
+    top: 200px;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes example {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    opacity: 0.5;
+  }
+  50% {
+    top: 200px;
+    opacity: 1;
+  }
+  75% {
+    top: 200px;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+
+.azad {
+  position: absolute;
+  bottom: 0.5rem;
+  font-size: small;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 @media (max-width: 768px) {
   .number::before {
-    width: 75px;
+    width: 85px;
   }
   .number img {
-    width: 25px;
-    height: 25px;
-    top: -7px;
-    left: -12px;
+    width: 30px;
+    height: 30px;
+    top: -5px;
+    left: -16px;
   }
   .start-quote {
     left: 12%;
@@ -188,21 +263,24 @@ body {
     left: 10%;
     right: 1.5%;
     top: 25%;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .author {
     right: 6%;
     bottom: 7.5%;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     font-weight: bolder;
   }
   .newq {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: lighter;
   }
   .container {
-    width: 70vw;
+    width: 80vw;
+  }
+  .inner {
+    width: 80vw;
   }
 }
 
@@ -224,12 +302,12 @@ body {
     left: 10%;
     right: 1%;
     top: 22%;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .author {
     right: 5%;
     bottom: 7.5%;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: bold;
   }
   .newq {
@@ -241,6 +319,16 @@ body {
   }
   .inner {
     width: 85vw;
+  }
+  .arrow {
+    top: 8%;
+    left: 85%;
+    font-size: 1.2rem;
+  }
+  .tweet__me {
+    top: 8.5%;
+    left: 38%;
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
